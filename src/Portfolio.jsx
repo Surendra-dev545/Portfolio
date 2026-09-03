@@ -4,8 +4,7 @@ import {
   FaLayerGroup, FaRocket, FaSun, FaMoon, FaBars, FaTimes,
   FaReact, FaNodeJs, FaJava, FaHtml5, FaCss3Alt, FaCertificate,
   FaGithub, FaArrowUp, FaEnvelope, FaTimes as FaClose,
-  FaPalette, FaMobileAlt, FaServer, FaShieldAlt, FaCheckCircle,
-  FaTimesCircle, FaExternalLinkAlt
+  FaCheckCircle, FaTimesCircle, FaExternalLinkAlt
 } from 'react-icons/fa';
 import { SiJavascript, SiExpress, SiMui, SiMongodb } from 'react-icons/si';
 import emailjs from 'emailjs-com';
@@ -81,7 +80,6 @@ function Portfolio() {
   };
 
   const c1 = useCounter(2, countersStarted);
-  const c2 = useCounter(12, countersStarted);
 
   // Trigger counters when stats come into view
   useEffect(() => {
@@ -95,9 +93,8 @@ function Portfolio() {
 
   const stats = useMemo(() => [
     { value: c1, suffix: '+', label: 'Years Experience' },
-    { value: c2, suffix: '+', label: 'Projects Delivered' },
     { value: 100, suffix: '%', label: 'Responsive Focus' }
-  ], [c1, c2]);
+  ], [c1]);
 
   const skillCards = useMemo(() => [
     { name: 'React.js', icon: <FaReact /> },
@@ -126,43 +123,11 @@ function Portfolio() {
     { name: 'Material-UI', level: 85 }
   ], []);
 
-  const services = useMemo(() => [
-    {
-      icon: <FaReact />,
-      title: 'React UI Development',
-      desc: 'Building responsive, component-driven React applications using hooks, state management, and clean JSX structure.',
-      points: ['React.js', 'Hooks & State', 'Component Architecture']
-    },
-    {
-      icon: <FaPalette />,
-      title: 'UI Styling & Animations',
-      desc: 'Creating polished interfaces using Material-UI and CSS3 with smooth transitions and consistent visual design.',
-      points: ['Material-UI', 'CSS3 Animations', 'Clean Layouts']
-    },
-    {
-      icon: <FaMobileAlt />,
-      title: 'Responsive Design',
-      desc: 'Making sure every layout works well across mobile, tablet, and desktop using flexible CSS and media queries.',
-      points: ['Mobile-First', 'Media Queries', 'Cross-Browser']
-    },
-    {
-      icon: <FaServer />,
-      title: 'MERN Stack Apps',
-      desc: 'Developing full-stack web apps using MongoDB, Express.js, React, and Node.js with REST API integration.',
-      points: ['Node.js & Express', 'MongoDB', 'REST APIs']
-    },
-    {
-      icon: <FaShieldAlt />,
-      title: 'Auth & Role-Based Access',
-      desc: 'Implementing JWT-based login systems and role-based access control for secure multi-user applications.',
-      points: ['JWT Authentication', 'Role-Based Access', 'Secure Routes']
-    },
-    {
-      icon: <FaCode />,
-      title: 'Web App Maintenance',
-      desc: 'Fixing bugs, improving performance, and keeping existing web applications clean and up to date.',
-      points: ['Bug Fixing', 'Code Cleanup', 'Performance Tuning']
-    }
+  const achievements = useMemo(() => [
+    { icon: <FaCertificate />, title: 'React — The Complete Guide', issuer: 'Udemy', year: '2023', type: 'cert' },
+    { icon: <FaCertificate />, title: 'Node.js Basics', issuer: 'Udemy', year: '2023', type: 'cert' },
+    { icon: <FaCertificate />, title: 'MongoDB Basics', issuer: 'MongoDB University', year: '2022', type: 'cert' },
+    { icon: <FaCertificate />, title: 'AWS Cloud Practitioner Essentials', issuer: 'AWS Training', year: '2024', type: 'cert' }
   ], []);
 
   const projects = useMemo(() => [
@@ -200,7 +165,7 @@ function Portfolio() {
     }
   ], []);
 
-  const navItems = ['home', 'about', 'experience', 'services', 'projects', 'skills', 'certifications', 'contact'];
+  const navItems = ['home', 'about', 'experience', 'achievements', 'projects', 'skills', 'certifications', 'beyond', 'contact'];
 
   useEffect(() => {
     const sections = document.querySelectorAll('.section');
@@ -252,15 +217,16 @@ function Portfolio() {
 
       {/* ================= HEADER ================= */}
       <header className="header glass-panel">
-        <button className="logo" onClick={() => handleNavClick('home')}>Surendra Mustini</button>
-
-        <div className="header-right">
-          <button className="theme-toggle" onClick={() => setDarkMode(!darkMode)} aria-label="Toggle theme">
-            {darkMode ? <FaSun /> : <FaMoon />}
-          </button>
-          <button className="hamburger" onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle menu">
-            {menuOpen ? <FaTimes /> : <FaBars />}
-          </button>
+        <div className="header-top">
+          <button className="logo" onClick={() => handleNavClick('home')}>Surendra Mustini</button>
+          <div className="header-right">
+            <button className="theme-toggle" onClick={() => setDarkMode(!darkMode)} aria-label="Toggle theme">
+              {darkMode ? <FaSun /> : <FaMoon />}
+            </button>
+            <button className="hamburger" onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle menu">
+              {menuOpen ? <FaTimes /> : <FaBars />}
+            </button>
+          </div>
         </div>
 
         <nav className={`navbar${menuOpen ? ' open' : ''}`}>
@@ -368,22 +334,22 @@ function Portfolio() {
         </section>
       )}
 
-      {/* ================= SERVICES ================= */}
-      {activeSection === 'services' && (
-        <section className="section services show" id="services">
-          <div className="section-heading center">
-            <span className="eyebrow">What I Offer</span>
-            <h2>Services built around your product goals.</h2>
+      {/* ================= ACHIEVEMENTS ================= */}
+      {activeSection === 'achievements' && (
+        <section className="section achievements show" id="achievements">
+          <div className="section-heading">
+            <span className="eyebrow">Achievements</span>
+            <h2>Certifications & professional wins.</h2>
           </div>
-          <div className="services-grid">
-            {services.map((svc, i) => (
-              <div className="service-card glass-panel" key={svc.title} style={{ animationDelay: `${i * 0.08}s` }}>
-                <div className="service-icon">{svc.icon}</div>
-                <h3>{svc.title}</h3>
-                <p>{svc.desc}</p>
-                <ul className="service-points">
-                  {svc.points.map((pt) => <li key={pt}><FaCheckCircle className="check-icon" />{pt}</li>)}
-                </ul>
+          <div className="achieve-grid">
+            {achievements.map((a, i) => (
+              <div className={`achieve-card glass-panel achieve-${a.type}`} key={a.title} style={{ animationDelay: `${i * 0.08}s` }}>
+                <div className="achieve-icon">{a.icon}</div>
+                <div className="achieve-body">
+                  <h3>{a.title}</h3>
+                  <p>{a.issuer}</p>
+                </div>
+                <span className="achieve-year">{a.year}</span>
               </div>
             ))}
           </div>
@@ -457,6 +423,28 @@ function Portfolio() {
         </section>
       )}
 
+      {/* ================= BEYOND CODE ================= */}
+      {activeSection === 'beyond' && (
+        <section className="section beyond show" id="beyond">
+          <div className="section-heading center">
+            <span className="eyebrow">Beyond Code</span>
+            <h2>A little personality goes a long way.</h2>
+          </div>
+          <p className="beyond-intro">When I'm not building UIs, you'll find me doing one of these:</p>
+          <div className="beyond-grid">
+            {[['🎵', 'Music'], ['✈️', 'Travelling'], ['👨‍👩‍👦', 'Family Time']].map(([emoji, label]) => (
+              <div className="beyond-card glass-panel" key={label}>
+                <span className="beyond-emoji">{emoji}</span>
+                <span>{label}</span>
+              </div>
+            ))}
+          </div>
+          <div className="beyond-quote glass-panel">
+            <p>"Music fuels my focus, travelling broadens my perspective, and spending time with my parents keeps me grounded."</p>
+          </div>
+        </section>
+      )}
+
       {/* ================= CONTACT ================= */}
       {activeSection === 'contact' && (
         <section className="section contact show" id="contact">
@@ -493,7 +481,7 @@ function Portfolio() {
           <button className="logo" onClick={() => handleNavClick('home')}>Surendra Mustini</button>
           <p className="footer-tagline">Frontend Engineer • React Specialist • UI Crafter</p>
           <div className="footer-links">
-            {['home', 'about', 'experience', 'services', 'projects', 'skills', 'contact'].map((s) => (
+            {['home', 'about', 'experience', 'achievements', 'projects', 'skills', 'contact'].map((s) => (
               <button key={s} onClick={() => handleNavClick(s)}>{s.charAt(0).toUpperCase() + s.slice(1)}</button>
             ))}
           </div>
