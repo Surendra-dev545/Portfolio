@@ -1,0 +1,16 @@
+$kind: collection
+name: 'Portfolio Contact API'
+description: |-
+  Contact form backend API for the portfolio website.
+  Built with Node.js, Express, and Nodemailer (Gmail SMTP).
+
+  Run the backend before sending requests:
+    cd server && npm install && npm run dev
+
+  Endpoints:
+    POST /api/contact  — Send a contact form email
+    GET  /api/health   — Health check
+variables:
+  - key: base_url
+    value: 'http://localhost:5000'
+    description: 'Backend server URL'
