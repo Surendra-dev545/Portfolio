@@ -156,9 +156,7 @@ html[data-theme='light'] .orb-two { background: rgba(14, 165, 233, 0.10); }
   -webkit-backdrop-filter: blur(18px);
 }
 
-/* =========================================
-   HEADER
-   ========================================= */
+
 
 .header {
   position: fixed;
@@ -259,9 +257,7 @@ html[data-theme='light'] .orb-two { background: rgba(14, 165, 233, 0.10); }
   box-shadow: 0 0 0 1px rgba(110, 231, 255, 0.08), 0 10px 30px rgba(110, 231, 255, 0.12);
 }
 
-/* =========================================
-   SECTIONS
-   ========================================= */
+
 
 .section {
   width: min(1180px, calc(100% - 32px));
@@ -278,9 +274,7 @@ html[data-theme='light'] .orb-two { background: rgba(14, 165, 233, 0.10); }
   transform: translateY(0);
 }
 
-/* =========================================
-   HOME
-   ========================================= */
+
 
 .home {
   min-height: 100vh;
@@ -333,9 +327,7 @@ html[data-theme='light'] .orb-two { background: rgba(14, 165, 233, 0.10); }
   font-size: 1rem;
 }
 
-/* =========================================
-   HERO ACTIONS / RESUME BUTTONS
-   ========================================= */
+
 
 .hero-actions {
   display: flex;
@@ -393,7 +385,7 @@ html[data-theme='light'] .orb-two { background: rgba(14, 165, 233, 0.10); }
   transform: translateY(-3px);
 }
 
-/* Make <a> Resume buttons behave exactly like buttons */
+
 .hero-actions a.btn {
   visibility: visible;
 
@@ -429,9 +421,7 @@ html[data-theme='light'] .orb-two { background: rgba(14, 165, 233, 0.10); }
   box-shadow: 0 12px 30px rgba(110, 231, 255, 0.12);
 }
 
-/* =========================================
-   STATS
-   ========================================= */
+
 
 .stats-grid,
 .skills-grid,
@@ -469,9 +459,7 @@ html[data-theme='light'] .orb-two { background: rgba(14, 165, 233, 0.10); }
   color: var(--text-secondary);
 }
 
-/* =========================================
-   SOCIAL LINKS
-   ========================================= */
+
 
 .home-sci {
   margin-top: 28px;
@@ -501,9 +489,7 @@ html[data-theme='light'] .orb-two { background: rgba(14, 165, 233, 0.10); }
     0 16px 30px rgba(110, 231, 255, 0.18);
 }
 
-/* =========================================
-   HERO VISUAL
-   ========================================= */
+
 
 .hero-visual {
   position: relative;
@@ -655,9 +641,7 @@ html[data-theme='light'] .orb-two { background: rgba(14, 165, 233, 0.10); }
   text-align: center;
 }
 
-/* =========================================
-   ABOUT
-   ========================================= */
+
 
 .about-container {
   display: grid;
@@ -707,9 +691,7 @@ html[data-theme='light'] .orb-two { background: rgba(14, 165, 233, 0.10); }
   line-height: 1.8;
 }
 
-/* =========================================
-   EXPERIENCE
-   ========================================= */
+
 
 .timeline-card {
   padding: 32px;
@@ -751,9 +733,7 @@ html[data-theme='light'] .orb-two { background: rgba(14, 165, 233, 0.10); }
   line-height: 1.6;
 }
 
-/* =========================================
-   PROJECTS
-   ========================================= */
+
 
 .project-grid {
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -805,17 +785,13 @@ html[data-theme='light'] .orb-two { background: rgba(14, 165, 233, 0.10); }
   line-height: 1.6;
 }
 
-/* =========================================
-   SKILLS
-   ========================================= */
+
 
 .skills-grid {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
-/* =========================================
-   SKILL ICONS
-   ========================================= */
+
 
 .skill-icon {
   font-size: 1.6rem;
@@ -839,9 +815,7 @@ html[data-theme='light'] .orb-two { background: rgba(14, 165, 233, 0.10); }
   border-color: rgba(110, 231, 255, 0.3);
 }
 
-/* =========================================
-   ACHIEVEMENTS
-   ========================================= */
+
 
 .achieve-grid {
   display: grid;
@@ -893,9 +867,7 @@ html[data-theme='light'] .orb-two { background: rgba(14, 165, 233, 0.10); }
   font-weight: 800;
 }
 
-/* =========================================
-   CERTIFICATIONS
-   ========================================= */
+
 
 .cert-grid {
   display: grid;
@@ -951,9 +923,7 @@ html[data-theme='light'] .orb-two { background: rgba(14, 165, 233, 0.10); }
   to   { opacity: 1; transform: translateY(0); }
 }
 
-/* =========================================
-   AVAILABLE DOT + TYPING
-   ========================================= */
+
 
 .avail-dot {
   display: inline-block;
@@ -984,9 +954,7 @@ html[data-theme='light'] .orb-two { background: rgba(14, 165, 233, 0.10); }
   50%       { opacity: 0; }
 }
 
-/* =========================================
-   PROJECT TAGS
-   ========================================= */
+
 
 .project-tags {
   display: flex;
@@ -1011,9 +979,7 @@ html[data-theme='light'] .orb-two { background: rgba(14, 165, 233, 0.10); }
   background: rgba(110, 231, 255, 0.18);
 }
 
-/* =========================================
-   SKILL PROGRESS BARS
-   ========================================= */
+
 
 .skill-bars {
   margin-top: 40px;
@@ -1059,9 +1025,7 @@ html[data-theme='light'] .orb-two { background: rgba(14, 165, 233, 0.10); }
   from { width: 0 !important; }
 }
 
-/* =========================================
-   NAV PROGRESS BAR
-   ========================================= */
+
 
 .nav-progress {
   position: fixed;
@@ -1074,9 +1038,7 @@ html[data-theme='light'] .orb-two { background: rgba(14, 165, 233, 0.10); }
   border-radius: 0 2px 2px 0;
 }
 
-/* =========================================
-   ABOUT BADGES
-   ========================================= */
+
 
 .about-badges {
   display: flex;
@@ -1096,9 +1058,7 @@ html[data-theme='light'] .orb-two { background: rgba(14, 165, 233, 0.10); }
   letter-spacing: 0.04em;
 }
 
-/* =========================================
-   TIMELINE IMPROVEMENTS
-   ========================================= */
+
 
 .timeline-wrapper {
   position: relative;
@@ -1133,9 +1093,7 @@ html[data-theme='light'] .orb-two { background: rgba(14, 165, 233, 0.10); }
   color: var(--btn-primary-text);
 }
 
-/* =========================================
-   SERVICES
-   ========================================= */
+
 
 .services-grid {
   display: grid;
@@ -1199,9 +1157,7 @@ html[data-theme='light'] .orb-two { background: rgba(14, 165, 233, 0.10); }
   flex-shrink: 0;
 }
 
-/* =========================================
-   PROJECT MODAL
-   ========================================= */
+
 
 .project-view-btn {
   display: inline-flex;
@@ -1302,9 +1258,7 @@ html[data-theme='light'] .orb-two { background: rgba(14, 165, 233, 0.10); }
   width: fit-content;
 }
 
-/* =========================================
-   TOAST
-   ========================================= */
+
 
 .toast {
   position: fixed;
@@ -1353,9 +1307,7 @@ html[data-theme='light'] .orb-two { background: rgba(14, 165, 233, 0.10); }
   align-items: center;
 }
 
-/* =========================================
-   FOOTER
-   ========================================= */
+
 
 .footer {
   margin: 40px auto 24px;
@@ -1431,9 +1383,7 @@ html[data-theme='light'] .orb-two { background: rgba(14, 165, 233, 0.10); }
   font-size: 0.82rem;
 }
 
-/* =========================================
-   SCROLL TO TOP
-   ========================================= */
+
 
 .scroll-top {
   position: fixed;
@@ -1461,9 +1411,7 @@ html[data-theme='light'] .orb-two { background: rgba(14, 165, 233, 0.10); }
   box-shadow: 0 14px 32px rgba(124,92,255,0.55);
 }
 
-/* =========================================
-   BEYOND CODE
-   ========================================= */
+
 
 .beyond-intro {
   color: var(--text-secondary);
@@ -1520,9 +1468,7 @@ html[data-theme='light'] .orb-two { background: rgba(14, 165, 233, 0.10); }
   line-height: 1.8;
 }
 
-/* =========================================
-   CONTACT
-   ========================================= */
+
 
 .section.contact {
   padding-bottom: 80px;
@@ -1648,9 +1594,7 @@ a {
   text-decoration: none;
 }
 
-/* =========================================
-   ANIMATIONS
-   ========================================= */
+
 
 @keyframes floatOrb {
   0%,
@@ -1674,9 +1618,7 @@ a {
   }
 }
 
-/* =========================================
-   RESPONSIVE - TABLET
-   ========================================= */
+
 
 @media (max-width: 1024px) {
   .home {
@@ -1720,7 +1662,7 @@ a {
       repeat(3, minmax(0, 1fr));
   }
 
-  /* Resume buttons */
+  
   .hero-actions {
     gap: 12px;
   }
@@ -1730,9 +1672,7 @@ a {
   }
 }
 
-/* =========================================
-   RESPONSIVE - MOBILE
-   ========================================= */
+
 
 @media (max-width: 900px) {
   .header {
@@ -1794,9 +1734,7 @@ a {
     );
   }
 
-  /* =====================================
-     MOBILE RESUME / HERO BUTTONS
-     ===================================== */
+
 
   .hero-actions {
     width: 100%;

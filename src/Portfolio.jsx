@@ -81,7 +81,7 @@ function Portfolio() {
 
   const c1 = useCounter(2, countersStarted);
 
-  // Trigger counters when stats come into view
+
   useEffect(() => {
     if (activeSection !== 'home') return;
     const observer = new IntersectionObserver(([e]) => {
